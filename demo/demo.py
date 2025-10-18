@@ -10,7 +10,9 @@ from tqdm import tqdm
 
 import torch
 
-from visualizer import AVAVisualizer
+# Import both visualizers - selection happens via command line argument
+from visualizer import AVAVisualizer as OriginalVisualizer
+from fast_visualizer import FastAVAVisualizer
 from action_predictor import AVAPredictorWorker
 
 #pytorch issuse #973
@@ -105,6 +107,13 @@ def main():
         help="The nms threshold for tracker",
         type=float,
     )
+    parser.add_argument(
+        "--visualizer",
+        default="original",
+        choices=["original", "fast"],
+        help="Choose visualizer: 'original' (9 fps, Pillow) or 'fast' (34 fps, OpenCV)",
+        type=str,
+    )
 
     args = parser.parse_args()
 
@@ -124,6 +133,14 @@ def main():
         print('Starting webcam demo, press Ctrl + C to terminate...')
     else:
         print('Starting video demo, video path: {}'.format(args.video_path))
+
+    # Select visualizer based on command line argument
+    if args.visualizer == "fast":
+        AVAVisualizer = FastAVAVisualizer
+        print('Using Fast Visualizer (OpenCV-based, ~34 fps)')
+    else:
+        AVAVisualizer = OriginalVisualizer
+        print('Using Original Visualizer (Pillow-based, ~9 fps)')
 
     # Initialise Visualizer
     video_writer = AVAVisualizer(
