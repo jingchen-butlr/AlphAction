@@ -73,9 +73,12 @@ cd /home/ec2-user/AlphAction/demo
 - ✅ **YOLOv11x**: State-of-the-art person detection
 - ✅ **BoT-SORT Tracker**: Robust multi-person tracking
 - ✅ **GPU Acceleration**: Automatic CUDA support if available
-- ✅ **Dual Visualizers**: Choose between Original (9 fps) or Fast (34 fps) via `--visualizer` flag
+- ✅ **Triple Visualizers**: Choose your speed!
+  - **Original** (9 fps): Pillow-based, maximum compatibility
+  - **Fast** (34 fps): OpenCV-based, CPU optimized
+  - **NVENC** (80-150 fps): FFmpeg+NVENC, GPU-accelerated encoding 🚀
 - ✅ **Configurable Parameters**: 
-  - `--visualizer {original,fast}`: Visualizer selection (default: original)
+  - `--visualizer {original,fast,nvenc}`: Visualizer selection (default: original)
   - `--tracker-box-thres`: Detection confidence threshold (default: 0.1)
   - `--tracker-nms-thres`: NMS IoU threshold (default: 0.4)
   - `--visual-threshold`: Visualization confidence threshold (default: 0.5)

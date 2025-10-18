@@ -10,9 +10,10 @@ from tqdm import tqdm
 
 import torch
 
-# Import both visualizers - selection happens via command line argument
+# Import all visualizers - selection happens via command line argument
 from visualizer import AVAVisualizer as OriginalVisualizer
 from fast_visualizer import FastAVAVisualizer
+from nvenc_visualizer import NVENCVisualizer
 from action_predictor import AVAPredictorWorker
 
 #pytorch issuse #973
@@ -110,8 +111,8 @@ def main():
     parser.add_argument(
         "--visualizer",
         default="original",
-        choices=["original", "fast"],
-        help="Choose visualizer: 'original' (9 fps, Pillow) or 'fast' (34 fps, OpenCV)",
+        choices=["original", "fast", "nvenc"],
+        help="Choose visualizer: 'original' (9 fps, Pillow), 'fast' (34 fps, OpenCV), or 'nvenc' (80-150 fps, FFmpeg+NVENC)",
         type=str,
     )
 
@@ -135,7 +136,10 @@ def main():
         print('Starting video demo, video path: {}'.format(args.video_path))
 
     # Select visualizer based on command line argument
-    if args.visualizer == "fast":
+    if args.visualizer == "nvenc":
+        AVAVisualizer = NVENCVisualizer
+        print('Using NVENC Visualizer (FFmpeg+NVENC GPU-accelerated, ~80-150 fps)')
+    elif args.visualizer == "fast":
         AVAVisualizer = FastAVAVisualizer
         print('Using Fast Visualizer (OpenCV-based, ~34 fps)')
     else:
