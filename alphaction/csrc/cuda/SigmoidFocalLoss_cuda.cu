@@ -3,17 +3,26 @@
 // yelantingfeng@sjtu.edu.cn
 #include <ATen/ATen.h>
 #include <ATen/cuda/CUDAContext.h>
-
-#include <THC/THC.h>
-#include <THC/THCAtomics.cuh>
-#include <THC/THCDeviceUtils.cuh>
+#include <c10/cuda/CUDAGuard.h>
 
 #include <cfloat>
 
-// TODO make it in a common file
+// Replace THC macros with modern equivalents
 #define CUDA_1D_KERNEL_LOOP(i, n)                            \
   for (int i = blockIdx.x * blockDim.x + threadIdx.x; i < n; \
        i += blockDim.x * gridDim.x)
+
+// Replace THCCeilDiv
+inline int64_t CeilDiv(int64_t a, int64_t b) {
+  return (a + b - 1) / b;
+}
+
+// Replace THCudaCheck
+#define CUDA_CHECK(condition) \
+  do { \
+    cudaError_t error = condition; \
+    AT_ASSERTM(error == cudaSuccess, "CUDA error: ", cudaGetErrorString(error)); \
+  } while(0)
 
 
 template <typename T>
@@ -58,18 +67,18 @@ __global__ void SigmoidFocalLossForward(const int nthreads,
 
 template <typename T>
 __global__ void SigmoidFocalLossBackward(const int nthreads,
-                const T* logits,
-                const T* targets,
-                const T* d_losses,
-                const int num_classes,
-                const float gamma,
-                const float alpha,
-                T* d_logits) {
+    const T* logits,
+    const T* targets,
+    const T* d_losses,
+    const int num_classes,
+    const float gamma,
+    const float alpha,
+    T* d_logits) {
   CUDA_1D_KERNEL_LOOP(i, nthreads) {
 
     // Decide it is positive or negative case.
     T c1 = targets[i];
-    T c2 = (1 - c1);
+    T c2 = (1.0 - c1);
 
     // alpha flag.
     T af1 = (alpha >= 0);
@@ -77,21 +86,45 @@ __global__ void SigmoidFocalLossBackward(const int nthreads,
 
     T zn = (1.0 - alpha) * af1 + af2;
     T zp = (alpha) * af1 + af2;
+
     // p = 1. / 1. + expf(-x); p = sigmoid(x)
     T  p = 1. / (1. + expf(-logits[i]));
 
-    // (1-p)**g * (1 - p - g*p*log(p)
-    T term1 = powf((1. - p), gamma) *
-                      (1. - p - (p * gamma * logf(max(p, FLT_MIN))));
+    // (1-p)**gamma
+    T pow_g_onemp = powf((1. - p), gamma);
 
-    // (p**g) * (g*(1-p)*log(1-p) - p)
-    T term2 = powf(p, gamma) *
-                  ((-1. * logits[i] * (logits[i] >= 0) -
-                      logf(1. + expf(logits[i] - 2. * logits[i] * (logits[i] >= 0)))) *
-                      (1. - p) * gamma - p);
+    // d[ (1-p)**gamma ] / dx
+    T d_pow_g_onemp = -gamma * powf((1. - p), (gamma - 1.0)) * p * (1.0 - p);
+
+    // (1-p)
+    T term1 = (1. - p);
+
+    // d[ (1-p) ] / dx
+    T d_term1 = -p * (1.0 - p);
+
+    // p**gamma
+    T pow_g_p = powf(p, gamma);
+
+    // d[ p**gamma ] / dx
+    T d_pow_g_p = gamma * powf(p, gamma - 1.0) * p * (1.0 - p);
+
+    // [log(p)]
+    T term2 = logf(max(p, FLT_MIN));
+
+    // d[log(p)] / dx
+    T d_term2 = (1.0 - p);
+
+    // log(1-p)
+    T term3 = logf(max(term1, FLT_MIN));
+
+    // d[log(1-p)] / dx
+    T d_term3 = -p;
+
     d_logits[i] = 0.0;
-    d_logits[i] += -c1 * term1 * zp;
-    d_logits[i] += -c2 * term2 * zn;
+    // gradient of cross entropy loss: FL(pt) = -log(pt)
+    d_logits[i] += -c1 * (d_pow_g_onemp * term2 + pow_g_onemp * d_term2) * zp;
+    d_logits[i] += -c2 * (d_pow_g_p * term3 + pow_g_p * d_term3) * zn;
+    // normalization
     d_logits[i] = d_logits[i] * d_losses[i];
 
   } // CUDA_1D_KERNEL_LOOP
@@ -101,27 +134,26 @@ __global__ void SigmoidFocalLossBackward(const int nthreads,
 at::Tensor SigmoidFocalLoss_forward_cuda(
 		const at::Tensor& logits,
                 const at::Tensor& targets,
+		const int num_classes,
 		const float gamma,
 		const float alpha) {
   AT_ASSERTM(logits.is_cuda(), "logits must be a CUDA tensor");
   AT_ASSERTM(targets.is_cuda(), "targets must be a CUDA tensor");
-  AT_ASSERTM(logits.dim() == 2, "logits should be NxClass");
-  AT_ASSERTM(targets.dim() == 2, "targets should be NxClass");
-  AT_ASSERTM(logits.size(0) == targets.size(0) && logits.size(1) == targets.size(1),
-      "targets should have exactly the same shape with logits.");
+  AT_ASSERTM(logits.numel() == targets.numel(),
+      "logits and targets should have same number of elements.");
 
-  const int num_samples = logits.size(0);
-  const int num_classes = logits.size(1);
+  at::cuda::CUDAGuard device_guard(logits.device());
 
-  auto losses = at::empty({num_samples, num_classes}, logits.options());
-  auto losses_size = static_cast<long>(num_samples) * num_classes;
+  auto losses = at::zeros({logits.numel()}, logits.options());
+  auto losses_size = logits.numel();
+
   cudaStream_t stream = at::cuda::getCurrentCUDAStream();
 
-  dim3 grid(std::min(THCCeilDiv(losses_size, 512L), 4096L));
+  dim3 grid(std::min(CeilDiv(losses_size, 512L), 4096L));
   dim3 block(512);
 
   if (losses.numel() == 0) {
-    THCudaCheck(cudaGetLastError());
+    CUDA_CHECK(cudaGetLastError());
     return losses;
   }
 
@@ -129,13 +161,13 @@ at::Tensor SigmoidFocalLoss_forward_cuda(
     SigmoidFocalLossForward<scalar_t><<<grid, block, 0, stream>>>(
          losses_size,
          logits.contiguous().data_ptr<scalar_t>(),
-	 targets.contiguous().data_ptr<scalar_t>(),
+         targets.contiguous().data_ptr<scalar_t>(),
          num_classes,
-	 gamma,
-	 alpha,
+         gamma,
+         alpha,
          losses.data_ptr<scalar_t>());
   });
-  THCudaCheck(cudaGetLastError());
+  CUDA_CHECK(cudaGetLastError());
   return losses;
 }
 
@@ -144,29 +176,29 @@ at::Tensor SigmoidFocalLoss_backward_cuda(
 		const at::Tensor& logits,
                 const at::Tensor& targets,
 		const at::Tensor& d_losses,
+		const int num_classes,
 		const float gamma,
 		const float alpha) {
   AT_ASSERTM(logits.is_cuda(), "logits must be a CUDA tensor");
   AT_ASSERTM(targets.is_cuda(), "targets must be a CUDA tensor");
   AT_ASSERTM(d_losses.is_cuda(), "d_losses must be a CUDA tensor");
 
+  AT_ASSERTM(logits.numel() == targets.numel(),
+      "logits and targets should have same number of elements");
   AT_ASSERTM(logits.dim() == 2, "logits should be NxClass");
-  AT_ASSERTM(targets.dim() == 2, "targets should be NxClass");
-  AT_ASSERTM(logits.size(0) == targets.size(0) && logits.size(1) == targets.size(1),
-      "targets should have exactly the same shape with logits.");
 
-  const int num_samples = logits.size(0);
-  const int num_classes = logits.size(1);
+  at::cuda::CUDAGuard device_guard(logits.device());
 
-  auto d_logits = at::zeros({num_samples, num_classes}, logits.options());
-  auto d_logits_size = static_cast<long>(num_samples) * num_classes;
+  auto d_logits = at::zeros({logits.size(0), logits.size(1)}, logits.options());
+  auto d_logits_size = logits.numel();
+
   cudaStream_t stream = at::cuda::getCurrentCUDAStream();
 
-  dim3 grid(std::min(THCCeilDiv(d_logits_size, 512L), 4096L));
+  dim3 grid(std::min(CeilDiv(d_logits_size, 512L), 4096L));
   dim3 block(512);
 
   if (d_logits.numel() == 0) {
-    THCudaCheck(cudaGetLastError());
+    CUDA_CHECK(cudaGetLastError());
     return d_logits;
   }
 
@@ -174,15 +206,13 @@ at::Tensor SigmoidFocalLoss_backward_cuda(
     SigmoidFocalLossBackward<scalar_t><<<grid, block, 0, stream>>>(
          d_logits_size,
          logits.contiguous().data_ptr<scalar_t>(),
-	 targets.contiguous().data_ptr<scalar_t>(),
-	 d_losses.contiguous().data_ptr<scalar_t>(),
+         targets.contiguous().data_ptr<scalar_t>(),
+         d_losses.contiguous().data_ptr<scalar_t>(),
          num_classes,
-	 gamma,
-	 alpha,
+         gamma,
+         alpha,
          d_logits.data_ptr<scalar_t>());
   });
-
-  THCudaCheck(cudaGetLastError());
+  CUDA_CHECK(cudaGetLastError());
   return d_logits;
 }
-

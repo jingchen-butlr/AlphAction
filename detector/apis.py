@@ -16,6 +16,10 @@ def get_detector(opt=None):
         from detector.tracker_api import Tracker
         from detector.tracker_cfg import cfg
         return Tracker(cfg, opt)
+    elif opt.detector == 'yolo11':
+        from detector.yolo11_api import YOLO11Detector
+        from detector.yolo11_cfg import cfg
+        return YOLO11Detector(cfg, opt)
     else:
         raise NotImplementedError
 

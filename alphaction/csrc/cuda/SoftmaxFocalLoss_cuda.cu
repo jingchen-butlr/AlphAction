@@ -3,17 +3,26 @@
 // yelantingfeng@sjtu.edu.cn
 #include <ATen/ATen.h>
 #include <ATen/cuda/CUDAContext.h>
-
-#include <THC/THC.h>
-#include <THC/THCAtomics.cuh>
-#include <THC/THCDeviceUtils.cuh>
+#include <c10/cuda/CUDAGuard.h>
 
 #include <cfloat>
 
-// TODO make it in a common file
+// Replace THC macros with modern equivalents
 #define CUDA_1D_KERNEL_LOOP(i, n)                            \
   for (int i = blockIdx.x * blockDim.x + threadIdx.x; i < n; \
        i += blockDim.x * gridDim.x)
+
+// Replace THCCeilDiv
+inline int64_t CeilDiv(int64_t a, int64_t b) {
+  return (a + b - 1) / b;
+}
+
+// Replace THCudaCheck
+#define CUDA_CHECK(condition) \
+  do { \
+    cudaError_t error = condition; \
+    AT_ASSERTM(error == cudaSuccess, "CUDA error: ", cudaGetErrorString(error)); \
+  } while(0)
 
 template <typename T>
 __global__ void SpatialSoftmaxForward(const int nthreads,
@@ -137,6 +146,8 @@ std::tuple<at::Tensor, at::Tensor> SoftmaxFocalLoss_forward_cuda(
   AT_ASSERTM(logits.size(0) == targets.size(0),
       "dim(0) of targets should be the same as dim(0) of logits.");
 
+  at::cuda::CUDAGuard device_guard(logits.device());
+
   const int num_samples = logits.size(0);
   const int num_classes = logits.size(1);
 
@@ -145,11 +156,11 @@ std::tuple<at::Tensor, at::Tensor> SoftmaxFocalLoss_forward_cuda(
   auto P = at::empty({num_samples, num_classes}, logits.options());
   cudaStream_t stream = at::cuda::getCurrentCUDAStream();
 
-  dim3 grid(std::min(THCCeilDiv(losses_size, 512L), 4096L));
+  dim3 grid(std::min(CeilDiv(losses_size, 512L), 4096L));
   dim3 block(512);
 
   if (losses.numel() == 0) {
-    THCudaCheck(cudaGetLastError());
+    CUDA_CHECK(cudaGetLastError());
     return std::make_tuple(losses, P);
   }
 
@@ -171,7 +182,7 @@ std::tuple<at::Tensor, at::Tensor> SoftmaxFocalLoss_forward_cuda(
       alpha,
       losses.data_ptr<scalar_t>());
   });
-  THCudaCheck(cudaGetLastError());
+  CUDA_CHECK(cudaGetLastError());
   return std::make_tuple(losses, P);
 }
 
@@ -192,6 +203,8 @@ at::Tensor SoftmaxFocalLoss_backward_cuda(
   AT_ASSERTM(logits.size(0) == targets.size(0),
       "dim(0) of targets should be the same as dim(0) of logits.");
 
+  at::cuda::CUDAGuard device_guard(logits.device());
+
   const int num_samples = logits.size(0);
   const int num_classes = logits.size(1);
 
@@ -201,12 +214,12 @@ at::Tensor SoftmaxFocalLoss_backward_cuda(
   auto d_logits_size = static_cast<long>(num_samples) * num_classes;
   cudaStream_t stream = at::cuda::getCurrentCUDAStream();
 
-  dim3 grid1(std::min(THCCeilDiv(buff_size, 512L), 4096L));
-  dim3 grid2(std::min(THCCeilDiv(d_logits_size, 512L), 4096L));
+  dim3 grid1(std::min(CeilDiv(buff_size, 512L), 4096L));
+  dim3 grid2(std::min(CeilDiv(d_logits_size, 512L), 4096L));
   dim3 block(512);
 
   if (d_logits.numel() == 0) {
-    THCudaCheck(cudaGetLastError());
+    CUDA_CHECK(cudaGetLastError());
     return d_logits;
   }
 
@@ -234,6 +247,6 @@ at::Tensor SoftmaxFocalLoss_backward_cuda(
       d_logits.data_ptr<scalar_t>());
   });
 
-  THCudaCheck(cudaGetLastError());
+  CUDA_CHECK(cudaGetLastError());
   return d_logits;
 }

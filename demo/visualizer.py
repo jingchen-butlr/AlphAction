@@ -331,7 +331,9 @@ class AVAVisualizer(object):
 
         overlay = Image.new("RGBA", img.size, (0, 0, 0, 0))
         trans_draw = ImageDraw.Draw(overlay)
-        text_width, text_height = trans_draw.textsize(time_text, font=self.font)
+        # Use textbbox for Pillow 10.0+ compatibility
+        bbox = trans_draw.textbbox((0, 0), time_text, font=self.font)
+        text_width, text_height = bbox[2] - bbox[0], bbox[3] - bbox[1]
         width_pad = max(self.font_size // 2, 1)
         rec_height = int(round(1.8 * text_height))
         height_pad = round((rec_height - text_height) / 2)
@@ -407,7 +409,11 @@ class AVAVisualizer(object):
             x1, y1, x2, y2 = box.tolist()
             overlay = Image.new("RGBA", result_vis.size, (0, 0, 0, 0))
             trans_draw = ImageDraw.Draw(overlay)
-            caption_sizes = [trans_draw.textsize(caption, font=self.font) for caption in captions]
+            # Use textbbox for Pillow 10.0+ compatibility
+            caption_sizes = []
+            for caption in captions:
+                bbox = trans_draw.textbbox((0, 0), caption, font=self.font)
+                caption_sizes.append((bbox[2] - bbox[0], bbox[3] - bbox[1]))
             caption_widths, caption_heights = list(zip(*caption_sizes))
             max_height = max(caption_heights)
             rec_height = int(round(1.8 * max_height))
@@ -474,7 +480,11 @@ class AVAVisualizer(object):
             x1, y1, x2, y2 = box.tolist()
             overlay = Image.new("RGBA", img.size, (0, 0, 0, 0))
             trans_draw = ImageDraw.Draw(overlay)
-            caption_sizes = [trans_draw.textsize(caption, font=self.font) for caption in captions]
+            # Use textbbox for Pillow 10.0+ compatibility
+            caption_sizes = []
+            for caption in captions:
+                bbox = trans_draw.textbbox((0, 0), caption, font=self.font)
+                caption_sizes.append((bbox[2] - bbox[0], bbox[3] - bbox[1]))
             caption_widths, caption_heights = list(zip(*caption_sizes))
             max_height = max(caption_heights)
             rec_height = int(round(1.8 * max_height))

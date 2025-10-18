@@ -117,7 +117,7 @@ def main():
     args.gpus = [int(i) for i in args.gpus.split(',')] if torch.cuda.device_count() >= 1 else [-1]
     args.min_box_area = 0
     args.tracking = True
-    args.detector = "tracker"
+    args.detector = "yolo11"  # Use YOLO11x with BoT-SORT tracker
     args.debug = False
 
     if args.webcam:

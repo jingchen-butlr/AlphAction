@@ -1,15 +1,24 @@
 #include <ATen/ATen.h>
 #include <ATen/cuda/CUDAContext.h>
+#include <c10/cuda/CUDAGuard.h>
+#include <cfloat>
 
-#include <THC/THC.h>
-#include <THC/THCAtomics.cuh>
-#include <THC/THCDeviceUtils.cuh>
-
-
-// TODO make it in a common file
+// Replace THC macros with modern equivalents
 #define CUDA_1D_KERNEL_LOOP(i, n)                            \
   for (int i = blockIdx.x * blockDim.x + threadIdx.x; i < n; \
        i += blockDim.x * gridDim.x)
+
+// Replace THCCeilDiv
+inline int64_t CeilDiv(int64_t a, int64_t b) {
+  return (a + b - 1) / b;
+}
+
+// Replace THCudaCheck
+#define CUDA_CHECK(condition) \
+  do { \
+    cudaError_t error = condition; \
+    AT_ASSERTM(error == cudaSuccess, "CUDA error: ", cudaGetErrorString(error)); \
+  } while(0)
 
 
 template <typename T>
@@ -116,6 +125,8 @@ std::tuple<at::Tensor, at::Tensor> ROIPool3d_forward_cuda(const at::Tensor& inpu
   AT_ASSERTM(input.is_cuda(), "input must be a CUDA tensor");
   AT_ASSERTM(rois.is_cuda(), "rois must be a CUDA tensor");
 
+  at::cuda::CUDAGuard device_guard(input.device());
+
   auto num_rois = rois.size(0);
   auto channels = input.size(1);
   auto length = input.size(2);
@@ -128,11 +139,11 @@ std::tuple<at::Tensor, at::Tensor> ROIPool3d_forward_cuda(const at::Tensor& inpu
 
   cudaStream_t stream = at::cuda::getCurrentCUDAStream();
 
-  dim3 grid(std::min(THCCeilDiv(output_size, 512L), 4096L));
+  dim3 grid(std::min(CeilDiv(output_size, 512L), 4096L));
   dim3 block(512);
 
   if (output.numel() == 0) {
-    THCudaCheck(cudaGetLastError());
+    CUDA_CHECK(cudaGetLastError());
     return std::make_tuple(output, argmax);
   }
 
@@ -151,7 +162,7 @@ std::tuple<at::Tensor, at::Tensor> ROIPool3d_forward_cuda(const at::Tensor& inpu
          output.data_ptr<scalar_t>(),
          argmax.data_ptr<int>());
   });
-  THCudaCheck(cudaGetLastError());
+  CUDA_CHECK(cudaGetLastError());
   return std::make_tuple(output, argmax);
 }
 
@@ -172,17 +183,19 @@ at::Tensor ROIPool3d_backward_cuda(const at::Tensor& grad,
   AT_ASSERTM(rois.is_cuda(), "rois must be a CUDA tensor");
   // TODO add more checks
 
+  at::cuda::CUDAGuard device_guard(grad.device());
+
   auto num_rois = rois.size(0);
   auto grad_input = at::zeros({batch_size, channels, length, height, width}, grad.options());
 
   cudaStream_t stream = at::cuda::getCurrentCUDAStream();
 
-  dim3 grid(std::min(THCCeilDiv(grad.numel(), 512L), 4096L));
+  dim3 grid(std::min(CeilDiv(grad.numel(), 512L), 4096L));
   dim3 block(512);
 
   // handle possibly empty gradients
   if (grad.numel() == 0) {
-    THCudaCheck(cudaGetLastError());
+    CUDA_CHECK(cudaGetLastError());
     return grad_input;
   }
 
@@ -202,6 +215,6 @@ at::Tensor ROIPool3d_backward_cuda(const at::Tensor& grad,
          grad_input.data_ptr<scalar_t>(),
          rois.contiguous().data_ptr<scalar_t>());
   });
-  THCudaCheck(cudaGetLastError());
+  CUDA_CHECK(cudaGetLastError());
   return grad_input;
 }
