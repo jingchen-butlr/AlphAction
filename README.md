@@ -26,7 +26,16 @@ by Jiajun Tang*, Jin Xia* (equal contribution), Xinzhi Mu, [Bo Pang](https://bop
 
 ## Installation 
 
-You need first to install this project, please check [INSTALL.md](INSTALL.md)
+**Quick Start with UV (Recommended - 10x faster):**
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+git clone https://github.com/MVIG-SJTU/AlphAction.git && cd AlphAction
+source activate_uv_env.sh  # Full setup in one command!
+```
+
+**Traditional Installation:**
+- **UV (Modern & Fast)**: See [INSTALL_UV.md](INSTALL_UV.md) or [UV_SETUP.md](UV_SETUP.md)
+- **Conda (Traditional)**: See [INSTALL.md](INSTALL.md)
 
 ## Data Preparation
 

@@ -27,6 +27,14 @@ dist/
 # Pycharm editor settings
 .idea
 
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment exports
+conda_requirements_export.txt
+
 # project dirs
 /datasets
 /models
