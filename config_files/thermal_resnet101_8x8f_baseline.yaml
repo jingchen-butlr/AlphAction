@@ -1,0 +1,77 @@
+MODEL:
+  WEIGHT: "data/models/aia_models/resnet101_8x8f_denseserial.pth"
+  BACKBONE:
+    CONV_BODY: "Slowfast-Resnet101"
+    FROZEN_BN: False  # Disable for thermal to avoid inplace operation issues
+    SLOWFAST:
+      BETA: 0.125
+      LATERAL: "tconv"
+      SLOW:
+        ACTIVE: True
+        CONV3_NONLOCAL: False
+        CONV4_NONLOCAL: False
+      FAST:
+        ACTIVE: True
+        CONV3_NONLOCAL: False
+        CONV4_NONLOCAL: False
+  NONLOCAL:
+    USE_ZERO_INIT_CONV: False
+    BN_INIT_GAMMA: 0.0
+    FROZEN_BN: False  # Disable for thermal to avoid inplace operation issues
+  ROI_ACTION_HEAD:
+    FEATURE_EXTRACTOR: "2MLPFeatureExtractor"
+    POOLER_TYPE: "align3d"
+    MEAN_BEFORE_POOLER: True
+    POOLER_RESOLUTION: 7
+    POOLER_SCALE: 0.0625
+    POOLER_SAMPLING_RATIO: 0
+    NUM_CLASSES: 16  # Padded to 16 for packing (actual: 14 thermal action classes 0-13)
+    # Thermal has 14 action classes, padded to 16 for byte alignment
+    NUM_PERSON_MOVEMENT_CLASSES: 16
+    NUM_OBJECT_MANIPULATION_CLASSES: 0
+    NUM_PERSON_INTERACTION_CLASSES: 0
+    PROPOSAL_PER_CLIP: 10
+    DROPOUT_RATE: 0.3  # Increased for small dataset
+  IA_STRUCTURE:
+    ACTIVE: False  # Disable IA for baseline
+
+INPUT:
+  FRAME_NUM: 64  # 64 consecutive frames
+  FRAME_SAMPLE_RATE: 1  # No temporal sampling gaps
+  TAU: 8  # Slow pathway temporal stride
+  ALPHA: 4  # Fast pathway has 4x more frames than slow
+  SLOW_JITTER: True  # Temporal augmentation
+  COLOR_JITTER: False  # Skip color jitter for thermal data
+  MIN_SIZE_TRAIN: 256  # Resize thermal 40×60 to 256×384
+  MAX_SIZE_TRAIN: 384
+  MIN_SIZE_TEST: 256
+  MAX_SIZE_TEST: 384
+
+DATASETS:
+  TRAIN: ("thermal_action_train",)
+  TEST: ("thermal_action_val",)
+
+DATALOADER:
+  NUM_WORKERS: 4
+  SIZE_DIVISIBILITY: 16
+  ASPECT_RATIO_GROUPING: False  # Thermal has uniform aspect ratio
+
+SOLVER:
+  BASE_LR: 0.0001  # Lower LR for small dataset (314 samples)
+  WARMUP_FACTOR: 0.25
+  BIAS_LR_FACTOR: 2
+  WEIGHT_DECAY: 1e-7
+  STEPS: (7000, 9000)  # LR decay at 70% and 90% of training
+  WARMUP_ITERS: 500  # Shorter warmup for small dataset
+  MAX_ITER: 10000  # ~32 epochs for 314 samples
+  CHECKPOINT_PERIOD: 1000  # Save every 1K iterations
+  EVAL_PERIOD: 1000  # Evaluate every 1K iterations
+  VIDEOS_PER_BATCH: 4  # Small batch size for 314 samples
+
+TEST:
+  BOX_THRESH: 0.8
+  ACTION_THRESH: 0.0
+  VIDEOS_PER_BATCH: 4
+
+OUTPUT_DIR: "data/output/thermal_resnet101_8x8f_baseline"
+

@@ -138,7 +138,7 @@ class FastPath(nn.Module):
             self.bn1 = nn.BatchNorm3d(conv_dims[0], eps=cfg.MODEL.BACKBONE.BN_EPSILON,
                                       momentum=cfg.MODEL.BACKBONE.BN_MOMENTUM)
 
-        self.relu = nn.ReLU(inplace=True)
+        self.relu = nn.ReLU(inplace=False)
         self.maxpool1 = nn.MaxPool3d((pool_strides_set[0], 3, 3), stride=(pool_strides_set[0], 2, 2))
 
         self.res_nl1 = ResNLBlock(cfg, conv_dims[0], conv_dims[1], stride=1, num_blocks=n1, dim_inner=dim_inner,
@@ -224,7 +224,7 @@ class SlowPath(nn.Module):
             self.bn1 = nn.BatchNorm3d(conv_dims[0], eps=cfg.MODEL.BACKBONE.BN_EPSILON,
                                       momentum=cfg.MODEL.BACKBONE.BN_MOMENTUM)
 
-        self.relu = nn.ReLU(inplace=True)
+        self.relu = nn.ReLU(inplace=False)
         self.maxpool1 = nn.MaxPool3d((pool_strides_set[0], 3, 3), stride=(pool_strides_set[0], 2, 2))
 
         self.res_nl1 = ResNLBlock(cfg, conv_dims[0], conv_dims[1], stride=1, num_blocks=n1, dim_inner=dim_inner,

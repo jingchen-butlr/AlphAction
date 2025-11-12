@@ -1,0 +1,91 @@
+{
+  "temporal_coverage": {
+    "issues": [],
+    "total_checked": 387
+  },
+  "annotation_validation": {
+    "issues": []
+  },
+  "frame_data_validation": {
+    "issues": [
+      {
+        "image_id": "SL14_R1_1760482263581",
+        "issue": "Unreasonable temperature range",
+        "min": -273.20001220703125,
+        "max": 44.900001525878906
+      },
+      {
+        "image_id": "SL14_R1_1760482308777",
+        "issue": "Unreasonable temperature range",
+        "min": -273.20001220703125,
+        "max": 44.400001525878906
+      },
+      {
+        "image_id": "SL14_R1_1760482264616",
+        "issue": "Unreasonable temperature range",
+        "min": -273.20001220703125,
+        "max": 44.900001525878906
+      },
+      {
+        "image_id": "SL14_R1_1760482313513",
+        "issue": "Unreasonable temperature range",
+        "min": -273.20001220703125,
+        "max": 44.20000076293945
+      },
+      {
+        "image_id": "SL14_R1_1760482293106",
+        "issue": "Unreasonable temperature range",
+        "min": -273.20001220703125,
+        "max": 44.599998474121094
+      },
+      {
+        "image_id": "SL14_R1_1760482273221",
+        "issue": "Unreasonable temperature range",
+        "min": -273.20001220703125,
+        "max": 44.79999923706055
+      }
+    ],
+    "samples_checked": 6
+  },
+  "statistics": {
+    "train": {
+      "total_images": 314,
+      "total_annotations": 405,
+      "avg_annotations_per_image": 1.2898089171974523,
+      "class_distribution": {
+        "standing": 123,
+        "walking": 10,
+        "transition-lying with risk transition": 8,
+        "lying down-lying with risk": 220,
+        "lower position-kneeling": 12,
+        "lower position-crouching": 3,
+        "lower position-bending": 6,
+        "transition-normal transition": 11,
+        "sitting": 8,
+        "transition-lying on the bed transition": 1,
+        "lying down-lying on the bed/couch": 3
+      }
+    },
+    "val": {
+      "total_images": 73,
+      "total_annotations": 95,
+      "avg_annotations_per_image": 1.3013698630136987,
+      "class_distribution": {
+        "standing": 25,
+        "walking": 4,
+        "transition-lying with risk transition": 2,
+        "lying down-lying with risk": 52,
+        "lower position-bending": 3,
+        "transition-normal transition": 4,
+        "lower position-kneeling": 3,
+        "lying down-lying on the bed/couch": 2
+      }
+    },
+    "hdf5": {
+      "total_sensors": 8,
+      "total_frames": 3976,
+      "corrupted_frames": 0,
+      "total_size_mb": 8.986190795898438
+    }
+  }
+}

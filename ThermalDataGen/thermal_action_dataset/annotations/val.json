@@ -1,0 +1,2056 @@
+{
+  "images": [
+    {
+      "id": "SL14_R1_1760482283426",
+      "sensor_id": "SL14_R1",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482283426,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 208
+    },
+    {
+      "id": "SL14_R1_1760482286983",
+      "sensor_id": "SL14_R1",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482286983,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 234
+    },
+    {
+      "id": "SL14_R1_1760482296554",
+      "sensor_id": "SL14_R1",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482296554,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 288
+    },
+    {
+      "id": "SL14_R1_1760482271722",
+      "sensor_id": "SL14_R1",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482271722,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 145
+    },
+    {
+      "id": "SL14_R1_1760482289853",
+      "sensor_id": "SL14_R1",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482289853,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 248
+    },
+    {
+      "id": "SL14_R1_1760482270220",
+      "sensor_id": "SL14_R1",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482270220,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 137
+    },
+    {
+      "id": "SL14_R1_1760482297625",
+      "sensor_id": "SL14_R1",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482297625,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 297
+    },
+    {
+      "id": "SL14_R1_1760482303379",
+      "sensor_id": "SL14_R1",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482303379,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 328
+    },
+    {
+      "id": "SL14_R1_1760482274595",
+      "sensor_id": "SL14_R1",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482274595,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 158
+    },
+    {
+      "id": "SL14_R2_1760482320685",
+      "sensor_id": "SL14_R2",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482320685,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 71
+    },
+    {
+      "id": "SL14_R2_1760482337720",
+      "sensor_id": "SL14_R2",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482337720,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 171
+    },
+    {
+      "id": "SL14_R2_1760482360676",
+      "sensor_id": "SL14_R2",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482360676,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 306
+    },
+    {
+      "id": "SL14_R2_1760482322135",
+      "sensor_id": "SL14_R2",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482322135,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 81
+    },
+    {
+      "id": "SL14_R2_1760482377743",
+      "sensor_id": "SL14_R2",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482377743,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 401
+    },
+    {
+      "id": "SL14_R2_1760482349385",
+      "sensor_id": "SL14_R2",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482349385,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 241
+    },
+    {
+      "id": "SL14_R2_1760482370643",
+      "sensor_id": "SL14_R2",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482370643,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 361
+    },
+    {
+      "id": "SL14_R2_1760482343172",
+      "sensor_id": "SL14_R2",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482343172,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 201
+    },
+    {
+      "id": "SL14_R2_1760482357556",
+      "sensor_id": "SL14_R2",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482357556,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 281
+    },
+    {
+      "id": "SL14_R3_1760482414945",
+      "sensor_id": "SL14_R3",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482414945,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 262
+    },
+    {
+      "id": "SL14_R3_1760482410449",
+      "sensor_id": "SL14_R3",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482410449,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 241
+    },
+    {
+      "id": "SL14_R3_1760482393538",
+      "sensor_id": "SL14_R3",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482393538,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 147
+    },
+    {
+      "id": "SL14_R3_1760482395148",
+      "sensor_id": "SL14_R3",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482395148,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 152
+    },
+    {
+      "id": "SL14_R3_1760482439658",
+      "sensor_id": "SL14_R3",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482439658,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 411
+    },
+    {
+      "id": "SL14_R3_1760482388469",
+      "sensor_id": "SL14_R3",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482388469,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 113
+    },
+    {
+      "id": "SL14_R3_1760482389917",
+      "sensor_id": "SL14_R3",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482389917,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 122
+    },
+    {
+      "id": "SL14_R3_1760482407835",
+      "sensor_id": "SL14_R3",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482407835,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 223
+    },
+    {
+      "id": "SL14_R4_1760482468821",
+      "sensor_id": "SL14_R4",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482468821,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 212
+    },
+    {
+      "id": "SL14_R4_1760482446959",
+      "sensor_id": "SL14_R4",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482446959,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 109
+    },
+    {
+      "id": "SL14_R4_1760482442137",
+      "sensor_id": "SL14_R4",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482442137,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 80
+    },
+    {
+      "id": "SL14_R4_1760482459446",
+      "sensor_id": "SL14_R4",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482459446,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 171
+    },
+    {
+      "id": "SL14_R4_1760482492036",
+      "sensor_id": "SL14_R4",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482492036,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 360
+    },
+    {
+      "id": "SL14_R4_1760482472584",
+      "sensor_id": "SL14_R4",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482472584,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 241
+    },
+    {
+      "id": "SL14_R4_1760482490454",
+      "sensor_id": "SL14_R4",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760482490454,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 351
+    },
+    {
+      "id": "SL18_R1_1760639273733",
+      "sensor_id": "SL18_R1",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639273733,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 395
+    },
+    {
+      "id": "SL18_R1_1760639274865",
+      "sensor_id": "SL18_R1",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639274865,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 403
+    },
+    {
+      "id": "SL18_R1_1760639230308",
+      "sensor_id": "SL18_R1",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639230308,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 134
+    },
+    {
+      "id": "SL18_R1_1760639268187",
+      "sensor_id": "SL18_R1",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639268187,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 363
+    },
+    {
+      "id": "SL18_R1_1760639278199",
+      "sensor_id": "SL18_R1",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639278199,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 423
+    },
+    {
+      "id": "SL18_R1_1760639265856",
+      "sensor_id": "SL18_R1",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639265856,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 349
+    },
+    {
+      "id": "SL18_R1_1760639226962",
+      "sensor_id": "SL18_R1",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639226962,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 114
+    },
+    {
+      "id": "SL18_R1_1760639261521",
+      "sensor_id": "SL18_R1",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639261521,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 323
+    },
+    {
+      "id": "SL18_R1_1760639264847",
+      "sensor_id": "SL18_R1",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639264847,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 343
+    },
+    {
+      "id": "SL18_R1_1760639247057",
+      "sensor_id": "SL18_R1",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639247057,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 234
+    },
+    {
+      "id": "SL18_R2_1760639290389",
+      "sensor_id": "SL18_R2",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639290389,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 134
+    },
+    {
+      "id": "SL18_R2_1760639298224",
+      "sensor_id": "SL18_R2",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639298224,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 183
+    },
+    {
+      "id": "SL18_R2_1760639323781",
+      "sensor_id": "SL18_R2",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639323781,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 334
+    },
+    {
+      "id": "SL18_R2_1760639311576",
+      "sensor_id": "SL18_R2",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639311576,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 263
+    },
+    {
+      "id": "SL18_R2_1760639302556",
+      "sensor_id": "SL18_R2",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639302556,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 209
+    },
+    {
+      "id": "SL18_R2_1760639307086",
+      "sensor_id": "SL18_R2",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639307086,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 234
+    },
+    {
+      "id": "SL18_R2_1760639330469",
+      "sensor_id": "SL18_R2",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639330469,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 375
+    },
+    {
+      "id": "SL18_R2_1760639292546",
+      "sensor_id": "SL18_R2",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639292546,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 149
+    },
+    {
+      "id": "SL18_R2_1760639291389",
+      "sensor_id": "SL18_R2",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639291389,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 142
+    },
+    {
+      "id": "SL18_R2_1760639335936",
+      "sensor_id": "SL18_R2",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639335936,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 409
+    },
+    {
+      "id": "SL18_R3_1760639365978",
+      "sensor_id": "SL18_R3",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639365978,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 229
+    },
+    {
+      "id": "SL18_R3_1760639396173",
+      "sensor_id": "SL18_R3",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639396173,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 410
+    },
+    {
+      "id": "SL18_R3_1760639349291",
+      "sensor_id": "SL18_R3",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639349291,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 129
+    },
+    {
+      "id": "SL18_R3_1760639373813",
+      "sensor_id": "SL18_R3",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639373813,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 274
+    },
+    {
+      "id": "SL18_R3_1760639359298",
+      "sensor_id": "SL18_R3",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639359298,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 189
+    },
+    {
+      "id": "SL18_R3_1760639344948",
+      "sensor_id": "SL18_R3",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639344948,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 103
+    },
+    {
+      "id": "SL18_R3_1760639363842",
+      "sensor_id": "SL18_R3",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639363842,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 214
+    },
+    {
+      "id": "SL18_R3_1760639347121",
+      "sensor_id": "SL18_R3",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639347121,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 114
+    },
+    {
+      "id": "SL18_R3_1760639392669",
+      "sensor_id": "SL18_R3",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639392669,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 389
+    },
+    {
+      "id": "SL18_R3_1760639393850",
+      "sensor_id": "SL18_R3",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639393850,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 394
+    },
+    {
+      "id": "SL18_R4_1760639455638",
+      "sensor_id": "SL18_R4",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639455638,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 408
+    },
+    {
+      "id": "SL18_R4_1760639425569",
+      "sensor_id": "SL18_R4",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639425569,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 228
+    },
+    {
+      "id": "SL18_R4_1760639423227",
+      "sensor_id": "SL18_R4",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639423227,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 216
+    },
+    {
+      "id": "SL18_R4_1760639441098",
+      "sensor_id": "SL18_R4",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639441098,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 323
+    },
+    {
+      "id": "SL18_R4_1760639411037",
+      "sensor_id": "SL18_R4",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639411037,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 143
+    },
+    {
+      "id": "SL18_R4_1760639428904",
+      "sensor_id": "SL18_R4",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639428904,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 248
+    },
+    {
+      "id": "SL18_R4_1760639420043",
+      "sensor_id": "SL18_R4",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639420043,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 197
+    },
+    {
+      "id": "SL18_R4_1760639413197",
+      "sensor_id": "SL18_R4",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639413197,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 156
+    },
+    {
+      "id": "SL18_R4_1760639438927",
+      "sensor_id": "SL18_R4",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639438927,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 308
+    },
+    {
+      "id": "SL18_R4_1760639434572",
+      "sensor_id": "SL18_R4",
+      "mac_address": "02:00:1a:62:51:67",
+      "timestamp": 1760639434572,
+      "width": 60,
+      "height": 40,
+      "frame_idx": 284
+    }
+  ],
+  "annotations": [
+    {
+      "id": 18,
+      "image_id": "SL14_R1_1760482270220",
+      "bbox": [
+        0.20969212341308596,
+        0.057534713745117184,
+        0.12066203816731771,
+        0.11506942749023437
+      ],
+      "category_id": 1,
+      "category_name": "standing",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 19,
+      "image_id": "SL14_R1_1760482270220",
+      "bbox": [
+        0.31869212341308606,
+        0.27074303690592455,
+        0.2126620381673176,
+        0.30865278116861955
+      ],
+      "category_id": 2,
+      "category_name": "walking",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 20,
+      "image_id": "SL14_R1_1760482271722",
+      "bbox": [
+        0.22869443766276043,
+        0.075,
+        0.14200000000000002,
+        0.15
+      ],
+      "category_id": 1,
+      "category_name": "standing",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 21,
+      "image_id": "SL14_R1_1760482271722",
+      "bbox": [
+        0.39219212341308596,
+        0.37324303690592453,
+        0.1956620381673177,
+        0.24698611450195307
+      ],
+      "category_id": 2,
+      "category_name": "walking",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 24,
+      "image_id": "SL14_R1_1760482274595",
+      "bbox": [
+        0.22202777099609378,
+        0.075,
+        0.14200000000000002,
+        0.15
+      ],
+      "category_id": 1,
+      "category_name": "standing",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 25,
+      "image_id": "SL14_R1_1760482274595",
+      "bbox": [
+        0.5063587900797526,
+        0.5070763702392579,
+        0.20732870483398436,
+        0.29931944783528663
+      ],
+      "category_id": 2,
+      "category_name": "walking",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 36,
+      "image_id": "SL14_R1_1760482283426",
+      "bbox": [
+        0.23702777099609373,
+        0.06708331298828124,
+        0.13399999999999998,
+        0.12199999999999998
+      ],
+      "category_id": 1,
+      "category_name": "standing",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 37,
+      "image_id": "SL14_R1_1760482283426",
+      "bbox": [
+        0.5783564758300781,
+        0.28673609415690104,
+        0.16333333333333333,
+        0.31666666666666665
+      ],
+      "category_id": 2,
+      "category_name": "walking",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 42,
+      "image_id": "SL14_R1_1760482286983",
+      "bbox": [
+        0.23702777099609373,
+        0.06708331298828124,
+        0.13399999999999998,
+        0.12199999999999998
+      ],
+      "category_id": 1,
+      "category_name": "standing",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 43,
+      "image_id": "SL14_R1_1760482286983",
+      "bbox": [
+        0.4266898091634115,
+        0.5100694274902344,
+        0.21000000000000002,
+        0.22000000000000003
+      ],
+      "category_id": 7,
+      "category_name": "transition-lying with risk transition",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 46,
+      "image_id": "SL14_R1_1760482289853",
+      "bbox": [
+        0.23702777099609373,
+        0.06708331298828124,
+        0.13399999999999998,
+        0.12199999999999998
+      ],
+      "category_id": 1,
+      "category_name": "standing",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 47,
+      "image_id": "SL14_R1_1760482289853",
+      "bbox": [
+        0.4833564758300781,
+        0.3867360941569009,
+        0.20666666666666667,
+        0.4466666666666667
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 56,
+      "image_id": "SL14_R1_1760482296554",
+      "bbox": [
+        0.23702777099609373,
+        0.06708331298828124,
+        0.13399999999999998,
+        0.12199999999999998
+      ],
+      "category_id": 1,
+      "category_name": "standing",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 57,
+      "image_id": "SL14_R1_1760482296554",
+      "bbox": [
+        0.4833564758300781,
+        0.3867360941569009,
+        0.20666666666666667,
+        0.4466666666666667
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 58,
+      "image_id": "SL14_R1_1760482297625",
+      "bbox": [
+        0.23702777099609373,
+        0.06708331298828124,
+        0.13399999999999998,
+        0.12199999999999998
+      ],
+      "category_id": 1,
+      "category_name": "standing",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 59,
+      "image_id": "SL14_R1_1760482297625",
+      "bbox": [
+        0.4833564758300781,
+        0.3867360941569009,
+        0.20666666666666667,
+        0.4466666666666667
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 66,
+      "image_id": "SL14_R1_1760482303379",
+      "bbox": [
+        0.23702777099609373,
+        0.06708331298828124,
+        0.13399999999999998,
+        0.12199999999999998
+      ],
+      "category_id": 1,
+      "category_name": "standing",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 67,
+      "image_id": "SL14_R1_1760482303379",
+      "bbox": [
+        0.4833564758300781,
+        0.3867360941569009,
+        0.20666666666666667,
+        0.4466666666666667
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 92,
+      "image_id": "SL14_R2_1760482320685",
+      "bbox": [
+        0.47001953125,
+        0.38342447916666667,
+        0.18333333333333324,
+        0.41333333333333333
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 93,
+      "image_id": "SL14_R2_1760482320685",
+      "bbox": [
+        0.2208528645833333,
+        0.0742578125,
+        0.14833333333333332,
+        0.13833333333333334
+      ],
+      "category_id": 1,
+      "category_name": "standing",
+      "object_id": 1,
+      "attribute_obscured": "25%"
+    },
+    {
+      "id": 94,
+      "image_id": "SL14_R2_1760482322135",
+      "bbox": [
+        0.47001953125,
+        0.38342447916666667,
+        0.18333333333333324,
+        0.41333333333333333
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 95,
+      "image_id": "SL14_R2_1760482322135",
+      "bbox": [
+        0.23085286458333332,
+        0.08842447916666667,
+        0.14833333333333332,
+        0.15666666666666668
+      ],
+      "category_id": 1,
+      "category_name": "standing",
+      "object_id": 1,
+      "attribute_obscured": "25%"
+    },
+    {
+      "id": 118,
+      "image_id": "SL14_R2_1760482337720",
+      "bbox": [
+        0.21292643229166663,
+        0.07333333333333332,
+        0.1308528645833333,
+        0.1433333333333333
+      ],
+      "category_id": 1,
+      "category_name": "standing",
+      "object_id": 1,
+      "attribute_obscured": "25%"
+    },
+    {
+      "id": 119,
+      "image_id": "SL14_R2_1760482337720",
+      "bbox": [
+        0.5587500000000001,
+        0.645,
+        0.2958333333333332,
+        0.28333333333333344
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 126,
+      "image_id": "SL14_R2_1760482343172",
+      "bbox": [
+        0.21292643229166663,
+        0.07333333333333332,
+        0.1308528645833333,
+        0.1433333333333333
+      ],
+      "category_id": 1,
+      "category_name": "standing",
+      "object_id": 1,
+      "attribute_obscured": "25%"
+    },
+    {
+      "id": 127,
+      "image_id": "SL14_R2_1760482343172",
+      "bbox": [
+        0.5608333333333333,
+        0.6475,
+        0.29166666666666674,
+        0.28166666666666673
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 136,
+      "image_id": "SL14_R2_1760482349385",
+      "bbox": [
+        0.21292643229166663,
+        0.07333333333333332,
+        0.1308528645833333,
+        0.1433333333333333
+      ],
+      "category_id": 1,
+      "category_name": "standing",
+      "object_id": 1,
+      "attribute_obscured": "25%"
+    },
+    {
+      "id": 137,
+      "image_id": "SL14_R2_1760482349385",
+      "bbox": [
+        0.5608333333333333,
+        0.6475,
+        0.29166666666666674,
+        0.28166666666666673
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 148,
+      "image_id": "SL14_R2_1760482357556",
+      "bbox": [
+        0.21292643229166663,
+        0.07333333333333332,
+        0.1308528645833333,
+        0.1433333333333333
+      ],
+      "category_id": 1,
+      "category_name": "standing",
+      "object_id": 1,
+      "attribute_obscured": "25%"
+    },
+    {
+      "id": 149,
+      "image_id": "SL14_R2_1760482357556",
+      "bbox": [
+        0.5608333333333333,
+        0.6475,
+        0.29166666666666674,
+        0.28166666666666673
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 154,
+      "image_id": "SL14_R2_1760482360676",
+      "bbox": [
+        0.21292643229166663,
+        0.07333333333333332,
+        0.1308528645833333,
+        0.1433333333333333
+      ],
+      "category_id": 1,
+      "category_name": "standing",
+      "object_id": 1,
+      "attribute_obscured": "25%"
+    },
+    {
+      "id": 155,
+      "image_id": "SL14_R2_1760482360676",
+      "bbox": [
+        0.5608333333333333,
+        0.6475,
+        0.29166666666666674,
+        0.28166666666666673
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 163,
+      "image_id": "SL14_R2_1760482370643",
+      "bbox": [
+        0.5608333333333333,
+        0.6475,
+        0.29166666666666674,
+        0.28166666666666673
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 169,
+      "image_id": "SL14_R2_1760482377743",
+      "bbox": [
+        0.5608333333333333,
+        0.6475,
+        0.29166666666666674,
+        0.28166666666666673
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 180,
+      "image_id": "SL14_R3_1760482388469",
+      "bbox": [
+        0.24395828247070311,
+        0.06375,
+        0.13374999999999995,
+        0.1275
+      ],
+      "category_id": 1,
+      "category_name": "standing",
+      "object_id": 4,
+      "attribute_obscured": "50%"
+    },
+    {
+      "id": 181,
+      "image_id": "SL14_R3_1760482388469",
+      "bbox": [
+        0.43145828247070317,
+        0.6089583301544189,
+        0.20124999999999998,
+        0.23041666030883806
+      ],
+      "category_id": 11,
+      "category_name": "lower position-bending",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 182,
+      "image_id": "SL14_R3_1760482389917",
+      "bbox": [
+        0.3008332824707031,
+        0.49124999999999996,
+        0.19499999999999998,
+        0.28750000000000003
+      ],
+      "category_id": 11,
+      "category_name": "lower position-bending",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 185,
+      "image_id": "SL14_R3_1760482393538",
+      "bbox": [
+        0.2552082824707031,
+        0.125,
+        0.17625000000000002,
+        0.25
+      ],
+      "category_id": 1,
+      "category_name": "standing",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 186,
+      "image_id": "SL14_R3_1760482395148",
+      "bbox": [
+        0.23833328247070312,
+        0.103125,
+        0.17000000000000004,
+        0.20625
+      ],
+      "category_id": 1,
+      "category_name": "standing",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 195,
+      "image_id": "SL14_R3_1760482407835",
+      "bbox": [
+        0.252802734375,
+        0.0669482421875,
+        0.15749999999999992,
+        0.133896484375
+      ],
+      "category_id": 1,
+      "category_name": "standing",
+      "object_id": 1,
+      "attribute_obscured": "25%"
+    },
+    {
+      "id": 197,
+      "image_id": "SL14_R3_1760482410449",
+      "bbox": [
+        0.327177734375,
+        0.303271484375,
+        0.16124999999999998,
+        0.37875000000000003
+      ],
+      "category_id": 7,
+      "category_name": "transition-lying with risk transition",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 200,
+      "image_id": "SL14_R3_1760482414945",
+      "bbox": [
+        0.33967773437499993,
+        0.307021484375,
+        0.13624999999999993,
+        0.37625
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 217,
+      "image_id": "SL14_R3_1760482439658",
+      "bbox": [
+        0.33967773437499993,
+        0.307021484375,
+        0.13624999999999993,
+        0.37625
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 219,
+      "image_id": "SL14_R4_1760482442137",
+      "bbox": [
+        0.3458333333333333,
+        0.3091666666666667,
+        0.1216666666666667,
+        0.35500000000000004
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 222,
+      "image_id": "SL14_R4_1760482446959",
+      "bbox": [
+        0.3458333333333333,
+        0.31666666666666665,
+        0.17666666666666664,
+        0.33
+      ],
+      "category_id": 6,
+      "category_name": "transition-normal transition",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 232,
+      "image_id": "SL14_R4_1760482459446",
+      "bbox": [
+        0.2404166666666667,
+        0.08,
+        0.15749999999999992,
+        0.16
+      ],
+      "category_id": 1,
+      "category_name": "standing",
+      "object_id": 5,
+      "attribute_obscured": "25%"
+    },
+    {
+      "id": 233,
+      "image_id": "SL14_R4_1760482459446",
+      "bbox": [
+        0.7341666666666666,
+        0.5850000000000001,
+        0.22333333333333316,
+        0.30833333333333307
+      ],
+      "category_id": 11,
+      "category_name": "lower position-bending",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 240,
+      "image_id": "SL14_R4_1760482468821",
+      "bbox": [
+        0.22125,
+        0.09250000000000001,
+        0.14916666666666667,
+        0.18166666666666664
+      ],
+      "category_id": 1,
+      "category_name": "standing",
+      "object_id": 5,
+      "attribute_obscured": "25%"
+    },
+    {
+      "id": 241,
+      "image_id": "SL14_R4_1760482468821",
+      "bbox": [
+        0.7516666666666666,
+        0.6883333333333334,
+        0.19833333333333347,
+        0.25
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 246,
+      "image_id": "SL14_R4_1760482472584",
+      "bbox": [
+        0.22125,
+        0.09250000000000001,
+        0.14916666666666667,
+        0.18166666666666664
+      ],
+      "category_id": 1,
+      "category_name": "standing",
+      "object_id": 5,
+      "attribute_obscured": "25%"
+    },
+    {
+      "id": 247,
+      "image_id": "SL14_R4_1760482472584",
+      "bbox": [
+        0.7508333333333334,
+        0.6858333333333333,
+        0.20333333333333337,
+        0.245
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 272,
+      "image_id": "SL14_R4_1760482490454",
+      "bbox": [
+        0.22458333333333333,
+        0.10000000000000002,
+        0.15583333333333332,
+        0.19666666666666666
+      ],
+      "category_id": 1,
+      "category_name": "standing",
+      "object_id": 5,
+      "attribute_obscured": "25%"
+    },
+    {
+      "id": 273,
+      "image_id": "SL14_R4_1760482490454",
+      "bbox": [
+        0.7491666666666666,
+        0.6866666666666665,
+        0.18333333333333335,
+        0.2500000000000001
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 274,
+      "image_id": "SL14_R4_1760482492036",
+      "bbox": [
+        0.22458333333333333,
+        0.10000000000000002,
+        0.15583333333333332,
+        0.19666666666666666
+      ],
+      "category_id": 1,
+      "category_name": "standing",
+      "object_id": 5,
+      "attribute_obscured": "25%"
+    },
+    {
+      "id": 275,
+      "image_id": "SL14_R4_1760482492036",
+      "bbox": [
+        0.7466666666666666,
+        0.6841666666666666,
+        0.17833333333333334,
+        0.2450000000000001
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 290,
+      "image_id": "SL18_R1_1760639226962",
+      "bbox": [
+        0.41604166666666664,
+        0.4884309895833333,
+        0.15666666666666668,
+        0.36666666666666653
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 293,
+      "image_id": "SL18_R1_1760639230308",
+      "bbox": [
+        0.41604166666666664,
+        0.4884309895833333,
+        0.15666666666666668,
+        0.36666666666666653
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 308,
+      "image_id": "SL18_R1_1760639247057",
+      "bbox": [
+        0.44354166666666667,
+        0.48093098958333336,
+        0.16833333333333333,
+        0.3483333333333334
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 321,
+      "image_id": "SL18_R1_1760639261521",
+      "bbox": [
+        0.4210416666666667,
+        0.5042643229166667,
+        0.16666666666666663,
+        0.32833333333333337
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 324,
+      "image_id": "SL18_R1_1760639264847",
+      "bbox": [
+        0.43020833333333336,
+        0.4984309895833333,
+        0.18499999999999994,
+        0.30333333333333345
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 325,
+      "image_id": "SL18_R1_1760639265856",
+      "bbox": [
+        0.43020833333333336,
+        0.4984309895833333,
+        0.18499999999999994,
+        0.30333333333333345
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 327,
+      "image_id": "SL18_R1_1760639268187",
+      "bbox": [
+        0.449375,
+        0.47343098958333335,
+        0.19000000000000006,
+        0.33666666666666656
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 332,
+      "image_id": "SL18_R1_1760639273733",
+      "bbox": [
+        0.5012434895833333,
+        0.43009765625,
+        0.1433333333333333,
+        0.3433333333333334
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 333,
+      "image_id": "SL18_R1_1760639274865",
+      "bbox": [
+        0.5120768229166667,
+        0.4242643229166667,
+        0.12166666666666665,
+        0.35500000000000004
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 336,
+      "image_id": "SL18_R1_1760639278199",
+      "bbox": [
+        0.5095768229166666,
+        0.4359309895833334,
+        0.12,
+        0.3616666666666667
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 347,
+      "image_id": "SL18_R2_1760639290389",
+      "bbox": [
+        0.370625,
+        0.7425976562500001,
+        0.13666666666666666,
+        0.2283333333333334
+      ],
+      "category_id": 6,
+      "category_name": "transition-normal transition",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 348,
+      "image_id": "SL18_R2_1760639291389",
+      "bbox": [
+        0.4297916666666667,
+        0.7417643229166666,
+        0.20166666666666666,
+        0.20333333333333325
+      ],
+      "category_id": 10,
+      "category_name": "lower position-kneeling",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 349,
+      "image_id": "SL18_R2_1760639292546",
+      "bbox": [
+        0.5572916666666666,
+        0.74759765625,
+        0.23333333333333334,
+        0.20499999999999996
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 354,
+      "image_id": "SL18_R2_1760639298224",
+      "bbox": [
+        0.5539583333333333,
+        0.7517643229166666,
+        0.22999999999999998,
+        0.19333333333333302
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 358,
+      "image_id": "SL18_R2_1760639302556",
+      "bbox": [
+        0.558125,
+        0.7700976562499999,
+        0.23833333333333329,
+        0.20000000000000007
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 362,
+      "image_id": "SL18_R2_1760639307086",
+      "bbox": [
+        0.5514583333333334,
+        0.7917643229166667,
+        0.245,
+        0.18666666666666665
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 366,
+      "image_id": "SL18_R2_1760639311576",
+      "bbox": [
+        0.5664583333333333,
+        0.7934309895833334,
+        0.2716666666666666,
+        0.22999999999999998
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 377,
+      "image_id": "SL18_R2_1760639323781",
+      "bbox": [
+        0.588125,
+        0.7034309895833333,
+        0.28166666666666673,
+        0.20666666666666667
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 383,
+      "image_id": "SL18_R2_1760639330469",
+      "bbox": [
+        0.588125,
+        0.7034309895833333,
+        0.28166666666666673,
+        0.20666666666666667
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 388,
+      "image_id": "SL18_R2_1760639335936",
+      "bbox": [
+        0.588125,
+        0.7034309895833333,
+        0.28166666666666673,
+        0.20666666666666667
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 1,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 396,
+      "image_id": "SL18_R3_1760639344948",
+      "bbox": [
+        0.81251953125,
+        0.5936328125,
+        0.16499999999999992,
+        0.22166666666666657
+      ],
+      "category_id": 6,
+      "category_name": "transition-normal transition",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 398,
+      "image_id": "SL18_R3_1760639347121",
+      "bbox": [
+        0.82001953125,
+        0.4409244791666667,
+        0.24,
+        0.21166666666666673
+      ],
+      "category_id": 4,
+      "category_name": "lying down-lying on the bed/couch",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 400,
+      "image_id": "SL18_R3_1760639349291",
+      "bbox": [
+        0.84,
+        0.447,
+        0.22999999999999998,
+        0.20200000000000007
+      ],
+      "category_id": 4,
+      "category_name": "lying down-lying on the bed/couch",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 409,
+      "image_id": "SL18_R3_1760639359298",
+      "bbox": [
+        0.591,
+        0.716,
+        0.30799999999999994,
+        0.18400000000000005
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 413,
+      "image_id": "SL18_R3_1760639363842",
+      "bbox": [
+        0.584,
+        0.708,
+        0.31400000000000006,
+        0.18400000000000016
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 415,
+      "image_id": "SL18_R3_1760639365978",
+      "bbox": [
+        0.584,
+        0.708,
+        0.31400000000000006,
+        0.18400000000000016
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 422,
+      "image_id": "SL18_R3_1760639373813",
+      "bbox": [
+        0.579,
+        0.712,
+        0.29200000000000004,
+        0.17200000000000004
+      ],
+      "category_id": 6,
+      "category_name": "transition-normal transition",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 439,
+      "image_id": "SL18_R3_1760639392669",
+      "bbox": [
+        0.5549999999999999,
+        0.6990000000000001,
+        0.30799999999999994,
+        0.17399999999999993
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 440,
+      "image_id": "SL18_R3_1760639393850",
+      "bbox": [
+        0.5549999999999999,
+        0.6990000000000001,
+        0.30799999999999994,
+        0.17399999999999993
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 442,
+      "image_id": "SL18_R3_1760639396173",
+      "bbox": [
+        0.5549999999999999,
+        0.6990000000000001,
+        0.30799999999999994,
+        0.17399999999999993
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 456,
+      "image_id": "SL18_R4_1760639411037",
+      "bbox": [
+        0.6625000000000001,
+        0.10083333333333333,
+        0.2616666666666667,
+        0.15833333333333333
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 458,
+      "image_id": "SL18_R4_1760639413197",
+      "bbox": [
+        0.6625000000000001,
+        0.10083333333333333,
+        0.2616666666666667,
+        0.15833333333333333
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 464,
+      "image_id": "SL18_R4_1760639420043",
+      "bbox": [
+        0.6625000000000001,
+        0.10083333333333333,
+        0.2616666666666667,
+        0.15833333333333333
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 467,
+      "image_id": "SL18_R4_1760639423227",
+      "bbox": [
+        0.6625000000000001,
+        0.10083333333333333,
+        0.2616666666666667,
+        0.15833333333333333
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 469,
+      "image_id": "SL18_R4_1760639425569",
+      "bbox": [
+        0.6725000000000001,
+        0.09166666666666666,
+        0.20499999999999996,
+        0.16333333333333333
+      ],
+      "category_id": 10,
+      "category_name": "lower position-kneeling",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 472,
+      "image_id": "SL18_R4_1760639428904",
+      "bbox": [
+        0.6758333333333333,
+        0.08666666666666667,
+        0.21166666666666656,
+        0.17333333333333334
+      ],
+      "category_id": 10,
+      "category_name": "lower position-kneeling",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 477,
+      "image_id": "SL18_R4_1760639434572",
+      "bbox": [
+        0.6616666666666666,
+        0.14,
+        0.2433333333333333,
+        0.18999999999999997
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 481,
+      "image_id": "SL18_R4_1760639438927",
+      "bbox": [
+        0.6616666666666666,
+        0.14,
+        0.2433333333333333,
+        0.18999999999999997
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 483,
+      "image_id": "SL18_R4_1760639441098",
+      "bbox": [
+        0.6616666666666666,
+        0.14,
+        0.2433333333333333,
+        0.18999999999999997
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    },
+    {
+      "id": 496,
+      "image_id": "SL18_R4_1760639455638",
+      "bbox": [
+        0.6533333333333333,
+        0.1366666666666667,
+        0.2633333333333333,
+        0.2033333333333333
+      ],
+      "category_id": 3,
+      "category_name": "lying down-lying with risk",
+      "object_id": 0,
+      "attribute_obscured": "0%"
+    }
+  ],
+  "categories": [
+    {
+      "id": 0,
+      "name": "sitting"
+    },
+    {
+      "id": 1,
+      "name": "standing"
+    },
+    {
+      "id": 2,
+      "name": "walking"
+    },
+    {
+      "id": 3,
+      "name": "lying down-lying with risk"
+    },
+    {
+      "id": 4,
+      "name": "lying down-lying on the bed/couch"
+    },
+    {
+      "id": 5,
+      "name": "leaning"
+    },
+    {
+      "id": 6,
+      "name": "transition-normal transition"
+    },
+    {
+      "id": 7,
+      "name": "transition-lying with risk transition"
+    },
+    {
+      "id": 8,
+      "name": "transition-lying on the bed transition"
+    },
+    {
+      "id": 9,
+      "name": "lower position-other"
+    },
+    {
+      "id": 10,
+      "name": "lower position-kneeling"
+    },
+    {
+      "id": 11,
+      "name": "lower position-bending"
+    },
+    {
+      "id": 12,
+      "name": "lower position-crouching"
+    },
+    {
+      "id": 13,
+      "name": "other"
+    }
+  ],
+  "info": {
+    "description": "Thermal Sensor Human Action Detection Dataset (Validation)",
+    "version": "1.0",
+    "year": 2025
+  }
+}

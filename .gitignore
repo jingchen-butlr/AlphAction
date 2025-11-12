@@ -23,6 +23,7 @@ dist/
 *.swp
 *~
 .DS_Store
+._*
 
 # Pycharm editor settings
 .idea

@@ -43,7 +43,7 @@ class Bottleneck(nn.Module):
                                  padding=(0, dilation, dilation))
         self.conv3 = Conv3dBN(cfg, dim_inner, dim_out, (1, 1, 1), stride=(1, 1, 1),
                                  padding=0, init_weight=cfg.MODEL.BACKBONE.BN_INIT_GAMMA)
-        self.relu = nn.ReLU(inplace=True)
+        self.relu = nn.ReLU(inplace=False)
 
     def forward(self, x):
         out = self.conv1(x)
@@ -76,7 +76,7 @@ class ResBlock(nn.Module):
         else:
             self.shortcut = Conv3dBN(cfg, dim_in, dim_out, (1, 1, 1),
                                      stride=(temp_stride, stride, stride), padding=0)
-        self.relu = nn.ReLU(inplace=True)
+        self.relu = nn.ReLU(inplace=False)
 
     def forward(self, x):
         tr = self.btnk(x)

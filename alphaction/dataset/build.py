@@ -48,6 +48,19 @@ def build_dataset(cfg, dataset_list, transforms, dataset_catalog, is_train=True,
                 args["object_transforms"] = object_transforms
             else:
                 args["object_file"] = None
+        elif data["factory"] == "ThermalAVADataset":
+            # for Thermal, similar to AVA but use HDF5 frames
+            args["remove_clips_without_annotations"] = is_train
+            args["frame_span"] = cfg.INPUT.FRAME_NUM*cfg.INPUT.FRAME_SAMPLE_RATE
+            if not is_train:
+                args["box_thresh"] = cfg.TEST.BOX_THRESH
+                args["action_thresh"] = cfg.TEST.ACTION_THRESH
+            else:
+                # disable box_file when train, use only gt to train
+                args["box_file"] = None
+            # No objects for thermal
+            args["object_file"] = None
+            args["object_transforms"] = None
 
         args["transforms"] = transforms
         # make dataset from factory

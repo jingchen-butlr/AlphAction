@@ -28,6 +28,20 @@ class DatasetCatalog(object):
             },
             "object_file": "AVA/boxes/ava_val_det_object_bbox.json",
         },
+        "thermal_action_train": {
+            "hdf5_root": "../ThermalDataGen/thermal_action_dataset/frames",
+            "ann_file": "../ThermalDataGen/thermal_action_dataset/annotations/train.json",
+            "box_file": "",
+            "eval_file_paths": {},
+            "object_file": "",
+        },
+        "thermal_action_val": {
+            "hdf5_root": "../ThermalDataGen/thermal_action_dataset/frames",
+            "ann_file": "../ThermalDataGen/thermal_action_dataset/annotations/val.json",
+            "box_file": "",
+            "eval_file_paths": {},
+            "object_file": "",
+        },
     }
 
     @staticmethod
@@ -49,6 +63,24 @@ class DatasetCatalog(object):
             )
             return dict(
                 factory="AVAVideoDataset",
+                args=args
+            )
+        elif "thermal_action" in name:
+            data_dir = DatasetCatalog.DATA_DIR
+            attrs = DatasetCatalog.DATASETS[name]
+            if attrs["box_file"]=="":
+                box_file = ""
+            else:
+                box_file = os.path.join(data_dir, attrs["box_file"])
+            args = dict(
+                hdf5_root=os.path.join(data_dir, attrs["hdf5_root"]),
+                ann_file=os.path.join(data_dir, attrs["ann_file"]),
+                box_file=box_file,
+                eval_file_paths=attrs["eval_file_paths"],
+                object_file="",
+            )
+            return dict(
+                factory="ThermalAVADataset",
                 args=args
             )
         raise RuntimeError("Dataset not available: {}".format(name))

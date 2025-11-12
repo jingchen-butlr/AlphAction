@@ -216,7 +216,11 @@ def main():
     logger.info(args)
 
     logger.info("Collecting env info (might take some time)")
-    logger.info("\n" + get_pretty_env_info())
+    try:
+        logger.info("\n" + get_pretty_env_info())
+    except Exception as e:
+        logger.warning(f"Could not collect env info: {e}")
+        logger.info("Skipping environment info collection")
 
     logger.info("Loaded configuration file {}".format(args.config_file))
     with open(args.config_file, "r") as cf:
